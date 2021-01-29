@@ -3,7 +3,11 @@
     <h1 class="display-4">Курс от МотоБрата</h1>
     <p class="lead">Этот курс поможет тебе написать свой первый сайт.</p>
     <hr class="my-4">
-   
+    <% if logged_in? %>
+    <%= link_to "Курс", user_path(current_user), class: "btn btn-primary btn-lg", id: "lolik" %>
+    <% else %>
+    <%= link_to "Регистрация нового МотоБрата!", signup_path, class: "btn btn-success btn-lg", id: "lolik" %>
+   <% end %>
    
   </div>
 </div>

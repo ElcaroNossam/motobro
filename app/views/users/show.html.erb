@@ -1,0 +1,13 @@
+
+<h1 class="text-center mt-4"><%= @user.username %> это твой профиль</h1>
+
+<%= gravatar_for @user, size: 200 %>
+
+<% if logged_in? && @user == current_user %>
+  <div class="text-center mt-4 btn-lg">
+    <%= link_to "Изменить профиль", edit_user_path(@user), class: "btn btn-outline-info" %>
+    <%= link_to "Удалить профиль", user_path(current_user), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Ты уверен?" } %> 
+  </div>
+<% end %>
+
+<h1 class="text-center mt-4">Материалы курса</h1>
