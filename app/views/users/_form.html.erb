@@ -24,6 +24,15 @@
             <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Придумай пароль" %>
           </div>
         </div>
+        <% if !logged_in? %>
+
+        <div class="form-group row" id="groupe">
+        <%= f.label :code, class: "col-2 col-form-label text-light" %>
+        <div class="col-10"> 
+          <%= f.text_field :code, class: "form-control shadow rounded", placeholder: "Code" %>
+        </div>
+      </div>
+      <% end %>
 
         <div class="form-group row justify-content-center" id="groupe">
           <%= f.submit(@user.new_record? ? "Регистрация" : "Обновить аккаунт", class: "btn btn-outline-light btn-lg") %>
