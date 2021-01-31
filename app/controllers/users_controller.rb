@@ -32,7 +32,8 @@ end
 
 
 def create
-    usercode = user_params[:code] 
+    usercode = params[:user][:code] 
+    
     if usercode == "motobro24" 
       @user = User.new(user_params)
     if @user.save
@@ -57,7 +58,7 @@ def create
 
   private
   def user_params
-    params.require(:user).permit(:username, :email, :password, :code)
+    params.require(:user).permit(:username, :email, :password)
   end
 
   def set_user
