@@ -16,14 +16,14 @@
           <h5 class="card-title">
           <%= link_to gravatar_for(user, size: 150), user %>
         </h5>
-            <%= link_to "View profile", user, class: "btn btn-outline-success" %>
+            <%= link_to "Смотреть профиль", user, class: "btn btn-outline-success" %>
             <% if logged_in? %>
               <% if user == current_user %>
-                <%= link_to "Edit profile", edit_user_path(user), class: "btn btn-outline-info" %>
+                <%= link_to "Изменить профиль", edit_user_path(user), class: "btn btn-outline-info" %>
               <% end %>
               <% if current_user.admin? %>
-                <%= link_to "Delete user", user_path(user), class: "btn btn-outline-danger", method: :delete,
-                data: {confirm: "Are you sure you want to delete the user account and all associated articles?"} %>
+                <%= link_to "Удалить профиль", user_path(user), class: "btn btn-outline-danger", method: :delete,
+                data: {confirm: "Уверен сто хочешь удалить?"} %>
               <% end %>
             <% end %>
           </div>

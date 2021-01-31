@@ -1,0 +1,26 @@
+<% if logged_in? %>
+ <div class="row justify-content-md-center">
+  <div class="col-4 mt-4">
+   <div class="card text-center shadow mb-5 bg-white rounded">
+     <div class="card-body">
+    <h1 class="text-center"> Материалы курса </h1>
+        <%= link_to "Часть 1", "https://youtu.be/L6p151k5nlg", class: "btn btn-outline-info" %>
+        <%= link_to "Часть 2", "https://youtu.be/5tMaFKqVgGs", class: "btn btn-outline-primary" %>
+        <%= link_to "Часть 3", "https://youtu.be/ibWatKSPzDk", class: "btn btn-outline-success" %>
+        <%= link_to "Часть 4", "https://youtu.be/KmhUeZF-oz8", class: "btn btn-outline-danger" %>
+    </div>
+   </div>
+  </div>
+ </div>
+
+<div class="container text-center">
+    <h1 class="text-success">Ссылка на мой  GitHub, где тебе надо будет копировать код!</h1>
+    <h2>  &copy; <%= link_to "GitHub", "https://github.com/ElcaroNossam/motobratiki", class: "text-danger" %></h2>
+</div>
+
+<div class="container text-center">
+    <h1 class="text-dark">Если что-то не получается, то пиши в чат, поможем!</h1>
+    <h2>  &copy; <%= link_to "Telegram", "https://t.me/rorofmotobro", class: "text-info" %></h2>
+</div>
+
+<% end %>
