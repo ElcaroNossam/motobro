@@ -5,6 +5,7 @@
 
 <% if logged_in? && @user == current_user %>
   <div class="text-center mt-4 btn-lg">
+  <%= link_to "Добавить фото", "https://ru.gravatar.com/", class: "btn btn-outline-success" %>
     <%= link_to "Изменить профиль", edit_user_path(@user), class: "btn btn-outline-info" %>
     <%= link_to "Удалить профиль", user_path(current_user), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Ты уверен?" } %> 
   </div>
