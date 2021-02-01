@@ -32,7 +32,7 @@ end
 
 
 def create
-    usercode = params[:user][:code] 
+    usercode = params[:user][:code].downcase
     
     if usercode == "motobro24" 
       @user = User.new(user_params)
@@ -44,7 +44,7 @@ def create
       render 'new'
     end
     else
-      flash[:danger] = "Wrong code!"
+      flash[:danger] = "Неправильный код!"
       redirect_to signup_path
     end
   end
