@@ -44,7 +44,7 @@ def create
       render 'new'
     end
     else
-      flash[:danger] = "Неправильный код!"
+      flash[:danger] = "Неправильный код! Не знаешь? Тогда пиши в инстаграмм!"
       redirect_to signup_path
     end
   end
