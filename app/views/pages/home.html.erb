@@ -1,7 +1,11 @@
 <div class="container" id="home-container">
   <div class="jumbotron text-center text-black">
     <h1 class="display-4 ">Авторский курс "Вход в мир IT"</h1>
+    <% if logged_in? %>
+    <h4>В этом курсе мы вместе создадим твой собственный сайт!</h4>
+    <% else %>
     <h2>Для получения кода доступа пиши в  &copy; <%= link_to "Instagram", "https://instagram.com/_ok_nel_set_?igshid=1hpw8a1ojq0sv", class: "text-secondary" %></h2>
+    <% end %>
     <hr class="my-4">
     <% if logged_in? %>
     <%= link_to "Курс", pages_course_path, class: "btn btn-dark btn-lg" %>
