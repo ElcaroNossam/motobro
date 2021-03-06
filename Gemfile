@@ -23,7 +23,11 @@ gem 'jbuilder', '~> 2.7'
  gem 'bcrypt', '~> 3.1.7'
  gem 'will_paginate'
  gem "font-awesome-rails"
+ gem 'faker'
  gem 'jquery-rails'
+ gem 'cloudinary'
+ gem 'carrierwave'
+ gem 'mini_magick'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -10,7 +10,12 @@ def new
 end
 
 def show 
+  @microposts = @user.microposts.paginate(page: params[:page])
+end
 
+def otzuv 
+  @user = User.find(session[:user_id])
+  @microposts = @user.microposts.paginate(page: params[:page])
 end
 
 def index
