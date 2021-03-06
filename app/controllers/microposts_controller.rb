@@ -1,7 +1,8 @@
 class MicropostsController < ApplicationController
-
+    before_action :log
     before_action :logged_in?, only: [:create, :destroy]
     before_action :correct_user,   only: :destroy
+    
     def create
         @micropost = current_user.microposts.build(micropost_params)
         if @micropost.save
@@ -21,6 +22,9 @@ class MicropostsController < ApplicationController
     
       private
     
+      def log
+        @user = current_user
+      end
         def micropost_params
           params.require(:micropost).permit(:content, :picture)
         end

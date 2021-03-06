@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   get 'pages/otzuv'
   get 'signup', to: 'users#new'
   resources :microposts,          only: [:create, :destroy]
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships,       only: [:create, :destroy]
+
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'

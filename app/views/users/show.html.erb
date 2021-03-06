@@ -2,6 +2,13 @@
 <h1 class="text-center mt-4"><%= @user.username %> </h1>
 
 <%= gravatar_for @user, size: 200 %>
+<div class="mopik">
+<section class="stats">
+<%= render 'shared/stats' %>
+</section>
+<%= render 'follow_form' if logged_in? %>
+
+</div>
 
 <% if logged_in? && @user == current_user %>
   <div class="text-center mt-4 btn-lg">
@@ -9,9 +16,13 @@
     <%= link_to "Изменить профиль", edit_user_path(@user), class: "btn btn-outline-info" %>
     <%= link_to "Удалить профиль", user_path(current_user), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Ты уверен?" } %> 
   </div>
+
+
 <% end %>
 
 <% if logged_in? && @user == current_user %>
+
+
 <h3 class="text-center  mt-4">Познакомимся?</h3>
 <div class="row justify-content-md-center">
 <div class="col-4 mt-2">

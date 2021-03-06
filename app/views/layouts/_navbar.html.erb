@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-        <%= link_to "Братья", users_path, class: "nav-link" %>
+          <%= link_to "Братья", users_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "О нас", pages_about_path, class: "nav-link" %>
@@ -16,6 +16,9 @@
         <%= link_to "Курс", pages_course_path, class: "nav-link" %>
       </li>
 
+      <li class="nav-item">
+        <%= link_to "Отзывы", pages_otzuv_path, class: "nav-link" %>
+    </li>
         <% if logged_in? %>
         <li class="nav-item">
           <%= link_to current_user.username, user_path(current_user), class: "nav-link" %>
