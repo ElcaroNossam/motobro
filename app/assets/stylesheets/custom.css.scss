@@ -95,8 +95,8 @@ body {
   .flickr_pagination .next_page {
     margin-left: 1em; }
 
-    .mopik {
-      margin-left: 600px;
+    #mopk {
+      margin-left: 300px;
     }
 
     /* microposts */
@@ -232,9 +232,10 @@ h2 {
   margin-top: 0;
   padding: 0;
   a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid #b60000;
+    margin-left: 0px;
+    float: center;
+    padding: 0px;
+    border-left: 5px solid #b60000;
     color: gray;
     &:first-child {
       padding-left: 0;
