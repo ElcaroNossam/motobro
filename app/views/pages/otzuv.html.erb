@@ -37,7 +37,7 @@
   <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
     <aside class="col-md-4 mt-4 ">
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <h3>Отзывы (<%= @user.microposts.count %>)</h3>
  
       </aside>
       <%= render 'shared/stats' %>

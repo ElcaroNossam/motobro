@@ -16,6 +16,9 @@
           <h5 class="card-title">
           <%= link_to gravatar_for(user, size: 150), user %>
         </h5>
+      <% @user = user %>
+  <%= render 'follow_form' if logged_in? %>
+
             <%= link_to "Смотреть профиль", user, class: "btn btn-outline-success" %>
             <% if logged_in? %>
               <% if user == current_user %>

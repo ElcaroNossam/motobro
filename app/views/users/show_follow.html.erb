@@ -3,7 +3,7 @@
     <section class="user_info">
       <%= gravatar_for @user %>
       <h1><%= @user.username %></h1>
-      <span><%= link_to "view my profile", @user %></span>
+      <span><%= link_to "Смотреть профиль", @user %></span>
       <span><b>Microposts:</b> <%= @user.microposts.count %></span>
     </section>
     <section class="stats">
