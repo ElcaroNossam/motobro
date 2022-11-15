@@ -24,10 +24,12 @@ gem 'jbuilder', '~> 2.7'
  gem 'will_paginate'
  gem "font-awesome-rails"
  gem 'faker'
+
+gem 'msgpack', '~> 1.4', '>= 1.4.1'
  gem 'jquery-rails'
  gem 'cloudinary'
  gem 'carrierwave'
- gem 'mini_magick'
+ gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
